@@ -1,0 +1,7 @@
+# Packages are downloaded from the ricercar releases page, not stored here.
+*.deb
+*.rpm
+*.AppImage
+*.pkg.tar.zst
+*.tar.gz
+SHA256SUMS*
