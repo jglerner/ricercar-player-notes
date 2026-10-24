@@ -48,3 +48,7 @@ Each Technical Note aims to:
 ---
 
 *Started 2026-10-24.*
+
+---
+
+MIT License — see [LICENSE](LICENSE).
