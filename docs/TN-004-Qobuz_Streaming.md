@@ -103,7 +103,9 @@ Two things together:
 
 - Local music is played in **VLC**. `~/Music` was removed from ricercar's
   library, so everything in ricercar is now Qobuz or Spotify.
-- The decoder limit is reported to the ricercar developers as a bug.
+- The decoder limit is reported to the ricercar developers:
+  [ricercar-player/ricercar#5](https://github.com/ricercar-player/ricercar/issues/5)
+  (opened 2026-10-24).
 
 If local MP3s are ever wanted in ricercar again, shrinking the embedded
 cover fixes them without touching the audio:
@@ -182,4 +184,5 @@ ricercar plays, other apps' sound waits until it stops.
 - Qobuz Connect: choose ricercar from the Qobuz app on the phone.
 - Optionally make WirePlumber ignore the EF499 so only ricercar can use it.
 - Replace the TOMATE soundbar with better speakers (planned upgrade).
-- Follow the ricercar bug report for large ID3v2 tags.
+- Follow [ricercar-player/ricercar#5](https://github.com/ricercar-player/ricercar/issues/5)
+  (large ID3v2 tags); update this note when it is fixed.
