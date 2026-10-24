@@ -157,6 +157,43 @@ ricercar plays, other apps' sound waits until it stops.
 
 ---
 
+## Known issue: Qobuz Connect does not play from the phone
+
+Qobuz Connect lets the Qobuz app list ricercar as a device
+(`ricercar (trixie)`) and control it. Registration and selection work;
+playback started from the phone does not.
+
+```
+qconnect::session: registered with Qobuz Connect as renderer Some(1)
+qconnect::session: selected in the Qobuz app      (22:03:31)
+qconnect::session: selected in the Qobuz app      (22:05:40)
+qconnect::session: selected in the Qobuz app      (22:10:55)
+(nothing after any of them)
+```
+
+- The iPhone app (Qobuz iOS 10.2.0, build 2610015094500) shows the track
+  playing normally, but nothing plays on the computer, and the plugin
+  logs no `loading track`, warning or error.
+- Playing the same track from inside ricercar works (FLAC 24/96,
+  bit-perfect).
+- Signing out and in on both the app and the plugin changes nothing.
+- The device is free (`fuser -v /dev/snd/pcmC2D0p` prints nothing), so
+  this is not the "busy" problem above.
+- ricercar starts plugins with a cleaned environment and does not pass
+  `RUST_LOG`, so the plugin's debug output (`SetState` messages) cannot
+  be enabled the way its README describes.
+
+Reported to the plugin author:
+[anon7627/ricercar-qconnect#1](https://github.com/anon7627/ricercar-qconnect/issues/1)
+(opened 2026-10-24). Untested: the same selection from the web player at
+play.qobuz.com, which would show whether the problem is the iOS app.
+
+Workarounds: play from inside ricercar, or control it from the phone
+with a UPnP app (mconnect Player, BubbleUPnP), which does not use the
+plugin.
+
+---
+
 ## Listening Chains
 
 | Chain | Notes |
@@ -181,7 +218,10 @@ ricercar plays, other apps' sound waits until it stops.
 
 ## Future Improvements
 
-- Qobuz Connect: choose ricercar from the Qobuz app on the phone.
+- Qobuz Connect from the phone: retest when
+  [anon7627/ricercar-qconnect#1](https://github.com/anon7627/ricercar-qconnect/issues/1)
+  is answered or fixed, and move it out of Known issue.
+- Try the web player (play.qobuz.com) as the Connect controller.
 - Optionally make WirePlumber ignore the EF499 so only ricercar can use it.
 - Replace the TOMATE soundbar with better speakers (planned upgrade).
 - Follow [ricercar-player/ricercar#5](https://github.com/ricercar-player/ricercar/issues/5)
