@@ -160,7 +160,7 @@ ricercar plays, other apps' sound waits until it stops.
 | Chain | Notes |
 |---|---|
 | K11 → headphone out (PO) → Audio-Technica ATH-R50x | bit-perfect to the K11 |
-| K11 → line out (LO) → AIYIMA T20 (two valves) | a clear improvement in sound; the tubes colour the analog signal after the DAC, so playback stays bit-perfect up to the K11 |
+| K11 → line out (LO) → AIYIMA T20 (two valves) → RCA-to-P2 (3.5 mm) cable → TOMATE soundbar (2.0) | the speaker chain; the T20 clearly improved the sound. The tubes colour the analog signal after the DAC, so playback stays bit-perfect up to the K11 |
 | EF499 → Sennheiser HD 650 | bit-perfect to the EF499 |
 
 ---
@@ -181,4 +181,5 @@ ricercar plays, other apps' sound waits until it stops.
 
 - Qobuz Connect: choose ricercar from the Qobuz app on the phone.
 - Optionally make WirePlumber ignore the EF499 so only ricercar can use it.
+- Replace the TOMATE soundbar with better speakers (planned upgrade).
 - Follow the ricercar bug report for large ID3v2 tags.

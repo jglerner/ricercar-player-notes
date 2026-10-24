@@ -22,7 +22,7 @@ causes and their fixes.
 | DAC 1 | FiiO K11 R2R (USB) |
 | DAC 2 | HiFiMAN EF499 (USB) |
 | Headphones | Sennheiser HD 650 (EF499), Audio-Technica ATH-R50x (K11) |
-| Amplifier | AIYIMA T20 tube amplifier (K11 line out) |
+| Speakers | K11 line out → AIYIMA T20 tube amplifier → TOMATE 2.0 soundbar |
 | Streaming | Qobuz Studio Duo, through the unofficial Qobuz plugin |
 
 ## Current Technical Notes

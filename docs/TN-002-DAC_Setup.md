@@ -109,4 +109,5 @@ settings, then select the K11's `hw:` entry in ricercar. Selecting
 - Optionally make WirePlumber ignore the EF499 so only ricercar can use
   it (a rule in `~/.config/wireplumber/wireplumber.conf.d/`).
 - Test native DSD on the K11.
-- Planned upgrade of the rest of the chain.
+- Planned upgrade: replace the TOMATE soundbar (K11 → AIYIMA T20 →
+  TOMATE) with better speakers.
