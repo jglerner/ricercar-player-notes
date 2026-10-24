@@ -23,9 +23,22 @@ fuser -v /dev/snd/pcmC*D0p   # who holds each DAC
 
 If `pipewire` holds the DAC ricercar should use:
 
-1. Set the system output to another device in Sound settings.
+1. Close the GNOME Sound settings window (its level meters hold the
+   default output).
 2. Stop other apps playing sound.
-3. Wait a few seconds and press play again.
+3. Wait a few seconds, then **Refresh** under Settings → Audio output
+   and press play again.
+
+See what holds the default output:
+
+```sh
+wpctl status | sed -n '/Audio/,/Video/p'
+```
+
+## Qobuz check
+
+Chain line under the seek bar: green dot, `Qobuz`, `FLAC 24/…`, the DAC
+name. A `file:///` source in the log means a local file, not Qobuz.
 
 ## Bit-perfect checklist
 

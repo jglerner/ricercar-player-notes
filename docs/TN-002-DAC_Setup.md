@@ -31,8 +31,12 @@ DSD rate = ALSA rate × 32: 88.2 kHz → DSD64, 176.4 kHz → DSD128,
 
 | DAC | Role | Path |
 |---|---|---|
-| FiiO K11 R2R | System output (browser, video, everything else). SE line out (LO) or headphone out (PO). | PipeWire, shared |
+| FiiO K11 R2R | System output (browser, video, everything else), and ricercar when idle. SE line out (LO) or headphone out (PO). | PipeWire, shared; `hw:` exclusive while ricercar plays |
 | HiFiMAN EF499 | ricercar, bit-perfect, to the HD 650 | `hw:` exclusive |
+
+A DAC can be the system output and still be used by ricercar: PipeWire
+releases it a few seconds after the last sound, as long as the GNOME
+Sound settings window is closed (TN-004).
 
 Second chain: K11 → GR70 → ADC → optical → JBL Cinema 180. The ADC turns
 the K11's analog output back into digital, so bit-perfect ends at the K11.
@@ -61,7 +65,9 @@ ricercar showed an ALSA error on the EF499.
 ## Cause
 
 `hw:` output needs the DAC exclusively. PipeWire had the DAC open
-because it was the system's default output:
+because it was the system's default output while the GNOME Sound
+settings window was open; its level meters keep the default output busy
+(found later, see TN-004):
 
 ```
 $ fuser -v /dev/snd/pcmC*D0p
@@ -72,8 +78,9 @@ $ fuser -v /dev/snd/pcmC*D0p
 
 ## Solution
 
-Keep the system default output on a device ricercar does not use (here,
-the K11). After that, `fuser` shows ricercar holding the EF499:
+Close the GNOME Sound settings window and pause other sound; keeping the
+system default on another device (here, the K11) also works. After that,
+`fuser` shows ricercar holding the EF499:
 
 ```
 /dev/snd/pcmC2D0p:   jglerner   2710 F...m pipewire   # K11, system

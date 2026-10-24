@@ -21,7 +21,9 @@ causes and their fixes.
 | Player | ricercar 0.10.0-1 (`.deb` package) |
 | DAC 1 | FiiO K11 R2R (USB) |
 | DAC 2 | HiFiMAN EF499 (USB) |
-| Headphones | Sennheiser HD 650 (on the EF499) |
+| Headphones | Sennheiser HD 650 (EF499), Audio-Technica ATH-R50x (K11) |
+| Amplifier | AIYIMA T20 tube amplifier (K11 line out) |
+| Streaming | Qobuz Studio Duo, through the unofficial Qobuz plugin |
 
 ## Current Technical Notes
 
@@ -30,6 +32,7 @@ causes and their fixes.
 | TN-001 | [Installation](docs/TN-001-Installation.md) | Working |
 | TN-002 | [DAC Setup](docs/TN-002-DAC_Setup.md) | Working |
 | TN-003 | [Quick Reference](docs/TN-003-Quick_Reference.md) | Working |
+| TN-004 | [Qobuz Streaming](docs/TN-004-Qobuz_Streaming.md) | Working |
 
 ---
 
