@@ -24,6 +24,7 @@ causes and their fixes.
 | Headphones | Sennheiser HD 650 (EF499), Audio-Technica ATH-R50x (K11) |
 | Speakers | K11 line out → AIYIMA T20 tube amplifier → TOMATE 2.0 soundbar |
 | Streaming | Qobuz Studio Duo, through the unofficial Qobuz plugin |
+| Qobuz app | Qobuzify (standalone, third-party) on the K11 |
 
 ## Current Technical Notes
 
@@ -33,6 +34,7 @@ causes and their fixes.
 | TN-002 | [DAC Setup](docs/TN-002-DAC_Setup.md) | Working |
 | TN-003 | [Quick Reference](docs/TN-003-Quick_Reference.md) | Working |
 | TN-004 | [Qobuz Streaming](docs/TN-004-Qobuz_Streaming.md) | Working |
+| TN-005 | [Qobuzify](docs/TN-005-Qobuzify.md) | Working |
 
 ---
 
